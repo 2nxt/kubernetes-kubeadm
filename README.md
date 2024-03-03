@@ -115,7 +115,7 @@ Run the following command on the control plane node to initialize the Kubernetes
 IP_ADDR=$(ip addr show enp1s0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 
 # Initialize the control plane node
-kubeadm init --apiserver-cert-extra-sans=controlplane --apiserver-advertise-address $IP_ADDR --pod-network-cidr=10.0.0.0/16
+kubeadm init --apiserver-cert-extra-sans=controlplane --apiserver-advertise-address $IP_ADDR --pod-network-cidr=10.244.0.0/16
 
 ```
 
